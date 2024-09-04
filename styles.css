@@ -1,0 +1,200 @@
+/*GLOBALS*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Estilos para lineas*/
+hr {
+    border: 0;
+    border-top: 1px solid #000;
+    margin-bottom: 20px;
+}
+
+/*Estilos para h2*/
+h2{
+    font-family: 'Roboto';
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+/*Estilos para cada seccion*/
+.section-container{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f9f9f9; 
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+/*Estilos para encabezado*/
+.head {
+    font-size: 20px;
+    font-family: 'Roboto';
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: auto;
+    margin: 0;
+    padding: 20px;
+    background-color: #2b2c2d;
+    color: #ffffff;
+}
+
+/*TEXTO*/
+
+/* Estilos para el párrafo */
+.styled-paragraph {
+    font-size: 18px;
+    text-align: justify;
+    text-transform: capitalize;
+    text-decoration: none;
+    margin-bottom: 20px;
+    color: #333; /* Color de texto */
+}
+
+/* Estilos para el blockquote */
+.cita-bloque {
+    font-size: 20px;
+    text-align: left;
+    text-transform: none;
+    font-style: italic;
+    border-left: 4px solid #cccccc;
+    margin: 0;
+    padding: 10px 20px;
+    background-color: #f0f0f0; /* Fondo gris claro */
+    color: #666666; /* Color de texto */
+    border-radius: 4px;
+}
+
+/*BOX*/
+
+/* Estilos para las cajas */
+.box {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    text-align: center;
+}
+
+.box-standard {
+    background-color: #ffffff; 
+}
+
+.box-highlight {
+    background-color: #ffebcd; 
+    border: 2px solid #000; 
+}
+
+/* Caja relativa */
+.relativo {
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: #e0f7fa;
+    padding: 20px;
+    margin-bottom: 30px; 
+    border-radius: 5px;
+}
+
+/* Caja absoluta dentro de la relativa */
+.absoluto {
+    text-align: left;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    transform: translateY(-50%);
+    background-color: #4db6ac;
+    padding: 0px 20px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+ /* Media Query para pantallas con un ancho máximo de 768px */
+ @media (max-width: 768px) {
+    body {
+        background-color: #9082e5; 
+    }
+
+    h1 {
+        font-size: 1.5em; 
+    }
+
+    section {
+        width: 90%; 
+        padding: 10px; 
+    }
+
+    .absoluto {
+        padding: 8px 16px; 
+    }
+}
+
+/*GRID-BOX*/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px; /* Espacio entre los elementos */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 90%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item {
+    background-color: #7e8ce0;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    font-size: 1.2em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/*ANIMACIONES*/
+
+/* Estilo para el div con clase animacion */
+.animacion {
+    width: 150px;  
+    height: 100px; 
+    background-color: #3498db; /* Color inicial */
+    transition: background-color 0.5s ease; /* Transición de color */
+}
+
+/* Cambio de color al hacer hover */
+.animacion:hover {
+    background-color: #e74c3c; /* Color al hacer hover */
+}
+
+/* Estilo para el div con clase mover */
+.mover {
+    width: 100px;      
+    height: 100px;      
+    background-color: #2ecc71;
+    border-radius: 50%; /* Hace que el div sea un círculo */
+    position: absolute; /* Necesario para mover el div */
+    animation: LeftToRightBackwards 5s linear; 
+}
+
+/* Definición de la animación usando @keyframes */
+@keyframes LeftToRightBackwards {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: 25%;
+    }
+    100% {
+        left: 0;
+    }
+}
